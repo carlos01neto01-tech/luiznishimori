@@ -40,24 +40,25 @@
       left: 0;
       width: 100%;
       height: 90px;
-      background: rgba(231, 240, 248, 0.95);
+      background: rgba(231, 240, 248, 0.96);
       border: 1px solid #004b9b;
       z-index: 999;
     }
 
     .header-container {
       width: 100%;
-      max-width: 1080px;
+      max-width: 1280px;
       height: 100%;
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 18px;
+      justify-content: flex-start;
+      gap: 170px;
+      padding: 0 48px;
     }
 
     .logo img {
-      width: 145px;
+      width: 150px;
       height: auto;
       display: block;
     }
@@ -65,16 +66,16 @@
     .desktop-menu {
       display: flex;
       align-items: center;
-      gap: 42px;
+      gap: 48px;
     }
 
     .desktop-menu a {
       position: relative;
       font-size: 18px;
       font-weight: 400;
-      color: #000000;
+      color: #111111;
       line-height: 1;
-      padding-bottom: 8px;
+      padding-bottom: 10px;
       transition: color 0.25s ease, transform 0.25s ease;
     }
 
@@ -92,7 +93,7 @@
 
     .desktop-menu a:hover {
       color: #004b9b;
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
     .desktop-menu a:hover::after {
@@ -100,8 +101,8 @@
     }
 
     .desktop-menu a.active {
-      font-weight: 700;
       color: #004b9b;
+      font-weight: 700;
     }
 
     .desktop-menu a.active::after {
@@ -151,48 +152,52 @@
 
     .hero {
       width: 100%;
-      height: 727px;
-      min-height: 727px;
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.98) 0%,
-          rgba(255, 255, 255, 0.95) 23%,
-          rgba(255, 255, 255, 0.45) 43%,
-          rgba(255, 255, 255, 0.02) 62%
-        ),
-        url("assets/img/hero-desktop.webp");
-      background-repeat: no-repeat;
-      background-size: 100% 100%, cover;
-      background-position: center top, center top;
-      border-bottom-right-radius: 34px;
+      min-height: calc(100vh - 90px);
       position: relative;
       display: flex;
       align-items: center;
+      overflow: hidden;
+      border-bottom-right-radius: 34px;
+      background: url("assets/img/hero-desktop.webp") no-repeat center center / cover;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.98) 0%,
+          rgba(255, 255, 255, 0.96) 18%,
+          rgba(255, 255, 255, 0.82) 30%,
+          rgba(255, 255, 255, 0.46) 44%,
+          rgba(255, 255, 255, 0.10) 60%,
+          rgba(255, 255, 255, 0.00) 76%
+        );
+      z-index: 1;
     }
 
     .hero-content {
       width: 100%;
       max-width: 1280px;
       margin: 0 auto;
-      padding-left: 88px;
-      padding-top: 10px;
+      padding: 30px 48px 30px 96px;
       position: relative;
       z-index: 2;
     }
 
     .hero-text {
-      width: 510px;
+      width: 470px;
     }
 
     .hero h1 {
-      width: 510px;
       font-size: 58px;
       line-height: 0.82;
       font-weight: 900;
       letter-spacing: -3px;
       color: #004b9b;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .hero h1 span {
@@ -205,13 +210,13 @@
       font-weight: 400;
       color: #000000;
       max-width: 450px;
-      margin-bottom: 38px;
+      margin-bottom: 40px;
     }
 
     .hero-buttons {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
       width: 465px;
     }
 
@@ -234,19 +239,19 @@
     }
 
     .btn-primary {
-      background: #10a13b;
+      background: #12a737;
       color: #ffffff;
-      border: 1px solid #10a13b;
+      border: 1px solid #12a737;
     }
 
     .btn-primary:hover {
-      background: #0c8d33;
+      background: #0f922f;
     }
 
     .btn-secondary {
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.9);
       color: #004b9b;
-      border: 1.5px solid #004b9b;
+      border: 1.5px solid #1e69c9;
     }
 
     .btn-secondary:hover {
@@ -258,10 +263,44 @@
       display: none;
     }
 
-    @media (min-width: 1281px) {
+    @media (min-width: 1600px) {
       .hero {
-        background-size: 100% 100%, 1280px 727px;
-        background-position: center top, center top;
+        background-position: center top;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      .header-container {
+        max-width: 1180px;
+        gap: 110px;
+        padding: 0 30px;
+      }
+
+      .desktop-menu {
+        gap: 32px;
+      }
+
+      .hero-content {
+        max-width: 1180px;
+        padding: 20px 30px 20px 60px;
+      }
+
+      .hero-text,
+      .hero-buttons {
+        width: 430px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero p {
+        font-size: 22px;
+      }
+
+      .btn {
+        height: 84px;
+        font-size: 26px;
       }
     }
 
@@ -276,7 +315,10 @@
       }
 
       .header-container {
+        max-width: 100%;
         padding: 0 26px;
+        justify-content: space-between;
+        gap: 0;
       }
 
       .logo img {
@@ -334,11 +376,14 @@
       }
 
       .hero {
-        height: auto;
         min-height: auto;
         display: block;
         background: #ffffff;
         border-bottom-right-radius: 0;
+      }
+
+      .hero::before {
+        display: none;
       }
 
       .mobile-hero-image {
@@ -368,7 +413,6 @@
       }
 
       .hero h1 {
-        width: 100%;
         font-size: 40px;
         line-height: 0.82;
         letter-spacing: -2px;
@@ -399,7 +443,6 @@
 
   <header class="site-header">
     <div class="header-container">
-
       <a href="#inicio" class="logo" aria-label="Luiz Nishimori">
         <img src="assets/img/logo-nishimori.webp" alt="Luiz Nishimori Deputado Federal" />
       </a>
@@ -417,7 +460,6 @@
         <span></span>
         <span></span>
       </button>
-
     </div>
 
     <nav class="mobile-menu-panel" aria-label="Menu mobile">
@@ -430,14 +472,11 @@
   </header>
 
   <main id="inicio">
-
     <section class="hero">
-
       <div class="mobile-hero-image"></div>
 
       <div class="hero-content">
         <div class="hero-text">
-
           <h1>
             Uma trajetória<br>
             de <span>resultado</span> pelo<br>
@@ -449,20 +488,12 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#atuacao" class="btn btn-primary">
-              Conheça a atuação
-            </a>
-
-            <a href="#gabinete" class="btn btn-secondary">
-              Fale com o gabinete
-            </a>
+            <a href="#atuacao" class="btn btn-primary">Conheça a atuação</a>
+            <a href="#gabinete" class="btn btn-secondary">Fale com o gabinete</a>
           </div>
-
         </div>
       </div>
-
     </section>
-
   </main>
 
   <script>
