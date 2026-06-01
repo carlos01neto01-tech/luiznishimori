@@ -506,3 +506,253 @@
 
 </body>
 </html>
+<section class="numbers-section" id="atuacao">
+  <div class="numbers-container">
+
+    <article class="number-card reveal-card" style="--delay: 0ms;">
+      <div class="check-circle">
+        <img src="assets/img/icon.png" alt="" />
+      </div>
+
+      <div class="number-card-content">
+        <h2>+R$ 147,5 mi</h2>
+        <p>em emendas autorizadas<br>para o Paraná.</p>
+      </div>
+    </article>
+
+    <article class="number-card reveal-card" style="--delay: 160ms;">
+      <div class="check-circle">
+        <img src="assets/img/icon.png" alt="" />
+      </div>
+
+      <div class="number-card-content">
+        <h2>48 emendas</h2>
+        <p>aprovadas no atual<br>mandato.</p>
+      </div>
+    </article>
+
+    <article class="number-card reveal-card" style="--delay: 320ms;">
+      <div class="check-circle">
+        <img src="assets/img/icon.png" alt="" />
+      </div>
+
+      <div class="number-card-content">
+        <h2>16 propostas</h2>
+        <p>de autoria em 2026.</p>
+      </div>
+    </article>
+
+    <article class="number-card reveal-card" style="--delay: 480ms;">
+      <div class="check-circle">
+        <img src="assets/img/icon.png" alt="" />
+      </div>
+
+      <div class="number-card-content">
+        <h2>4 mandatos</h2>
+        <p>representando o<br>Paraná na Câmara.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<style>
+  .numbers-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 70px 24px 76px;
+    overflow: hidden;
+  }
+
+  .numbers-container {
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .number-card {
+    position: relative;
+    min-height: 266px;
+    border: 2px solid #004b9b;
+    border-radius: 28px;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8f8f8 42%,
+      #e7e7e7 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 22px 38px;
+    overflow: visible;
+  }
+
+  .check-circle {
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #0da33c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      0 10px 22px rgba(13, 163, 60, 0.38),
+      0 0 22px rgba(13, 163, 60, 0.34);
+    z-index: 2;
+  }
+
+  .check-circle img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  .number-card-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .number-card h2 {
+    font-size: 36px;
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #004b9b;
+    margin-bottom: 22px;
+  }
+
+  .number-card p {
+    font-size: 18px;
+    line-height: 0.9;
+    font-weight: 400;
+    color: #0da33c;
+  }
+
+  .reveal-card {
+    opacity: 0;
+    transform: translateY(46px) scale(0.96);
+    filter: blur(16px);
+    transition:
+      opacity 0.75s ease,
+      transform 0.75s ease,
+      filter 0.75s ease;
+    transition-delay: var(--delay);
+  }
+
+  .reveal-card.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  .reveal-card.is-visible .check-circle {
+    animation: checkPop 0.65s ease both;
+    animation-delay: calc(var(--delay) + 180ms);
+  }
+
+  @keyframes checkPop {
+    0% {
+      transform: translateX(-50%) scale(0.3);
+      opacity: 0;
+      filter: blur(8px);
+    }
+
+    65% {
+      transform: translateX(-50%) scale(1.13);
+      opacity: 1;
+      filter: blur(0);
+    }
+
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .numbers-section {
+      padding: 70px 28px 80px;
+    }
+
+    .numbers-container {
+      max-width: 370px;
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+
+    .number-card {
+      min-height: 266px;
+      border-radius: 28px;
+      padding: 58px 22px 38px;
+    }
+
+    .check-circle {
+      width: 60px;
+      height: 60px;
+      top: -30px;
+    }
+
+    .check-circle img {
+      width: 31px;
+      height: 31px;
+    }
+
+    .number-card h2 {
+      font-size: 37px;
+      letter-spacing: -2.3px;
+      margin-bottom: 22px;
+    }
+
+    .number-card p {
+      font-size: 18px;
+      line-height: 0.9;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .numbers-section {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+
+    .number-card h2 {
+      font-size: 34px;
+    }
+
+    .number-card p {
+      font-size: 17px;
+    }
+  }
+</style>
+
+<script>
+  const revealCards = document.querySelectorAll(".reveal-card");
+
+  const revealObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.22
+    }
+  );
+
+  revealCards.forEach(function (card) {
+    revealObserver.observe(card);
+  });
+</script>
