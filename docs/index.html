@@ -813,13 +813,13 @@
 
   .presence-container {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1120px;
     min-height: 390px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 54px;
+    gap: 34px;
   }
 
   .presence-text {
@@ -851,11 +851,11 @@
   }
 
   .presence-image img {
-    width: 365px;
+    width: 465px;
     max-width: 100%;
     height: auto;
     display: block;
-    filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.32));
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.36));
   }
 
   @media (max-width: 1023px) {
@@ -881,6 +881,7 @@
     .presence-image img {
       width: 285px;
       max-width: 92%;
+      filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.32));
     }
 
     .presence-text {
