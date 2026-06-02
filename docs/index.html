@@ -782,3 +782,139 @@
     revealObserver.observe(card);
   });
 </script>
+<section class="presence-section">
+  <div class="presence-container">
+
+    <div class="presence-text">
+      <h2>
+        Presença no Paraná.<br>
+        Atuação em Brasília.
+      </h2>
+
+      <p>
+        Cada município tem uma necessidade diferente. Luiz Nishimori percorre o Paraná ouvindo prefeitos, vereadores e lideranças locais — e leva essas demandas diretamente para Brasília, onde transforma escuta em recurso e recurso em obra.
+      </p>
+    </div>
+
+    <div class="presence-image">
+      <img src="assets/img/FOTOS.webp" alt="Fotos de Luiz Nishimori em atuação no Paraná e em Brasília">
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .presence-section {
+    width: 100%;
+    background: #004b93;
+    padding: 56px 24px 60px;
+    overflow: hidden;
+  }
+
+  .presence-container {
+    width: 100%;
+    max-width: 1080px;
+    min-height: 390px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 54px;
+  }
+
+  .presence-text {
+    color: #ffffff;
+  }
+
+  .presence-text h2 {
+    font-size: 58px;
+    line-height: 0.86;
+    font-weight: 900;
+    letter-spacing: -3.5px;
+    color: #ffffff;
+    margin-bottom: 32px;
+    max-width: 610px;
+  }
+
+  .presence-text p {
+    font-size: 25px;
+    line-height: 0.92;
+    font-weight: 400;
+    color: #ffffff;
+    max-width: 590px;
+  }
+
+  .presence-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .presence-image img {
+    width: 365px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.32));
+  }
+
+  @media (max-width: 1023px) {
+    .presence-section {
+      padding: 28px 24px 66px;
+      background: #004b93;
+    }
+
+    .presence-container {
+      max-width: 390px;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+      text-align: center;
+    }
+
+    .presence-image {
+      order: 1;
+      width: 100%;
+    }
+
+    .presence-image img {
+      width: 285px;
+      max-width: 92%;
+    }
+
+    .presence-text {
+      order: 2;
+      width: 100%;
+    }
+
+    .presence-text h2 {
+      font-size: 41px;
+      line-height: 0.78;
+      letter-spacing: -2.8px;
+      margin: 0 auto 34px;
+      max-width: 340px;
+    }
+
+    .presence-text p {
+      font-size: 15.5px;
+      line-height: 0.92;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .presence-text h2 {
+      font-size: 38px;
+    }
+
+    .presence-text p {
+      font-size: 14.5px;
+    }
+
+    .presence-image img {
+      width: 265px;
+    }
+  }
+</style>
