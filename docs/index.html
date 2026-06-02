@@ -1346,3 +1346,436 @@
     pillarObserver.observe(item);
   });
 </script>
+<section class="parliament-section" id="propostas">
+  <div class="parliament-container">
+
+    <div class="parliament-content parliament-reveal-left" style="--delay: 0ms;">
+      <h2>
+        Atuação parlamentar<br>
+        com <span>responsabilidade.</span>
+      </h2>
+
+      <p class="parliament-subtitle">
+        Na Câmara dos Deputados, Luiz Nishimori participa de debates, votações, comissões e relatorias que impactam o Paraná e o Brasil.
+      </p>
+
+      <div class="parliament-actions">
+
+        <article class="parliament-item parliament-reveal-left" style="--delay: 140ms;">
+          <div class="parliament-row">
+            <span>Projetos apresentados</span>
+
+            <button class="parliament-btn" type="button" aria-expanded="false">
+              Saber mais
+            </button>
+          </div>
+
+          <div class="parliament-description">
+            <p>
+              Propostas que buscam fortalecer áreas estratégicas para o Paraná, com atenção às necessidades dos municípios, do setor produtivo e da população.
+            </p>
+          </div>
+        </article>
+
+        <article class="parliament-item parliament-reveal-right" style="--delay: 260ms;">
+          <div class="parliament-row">
+            <span>Relatorias e articulações</span>
+
+            <button class="parliament-btn" type="button" aria-expanded="false">
+              Saber mais
+            </button>
+          </div>
+
+          <div class="parliament-description">
+            <p>
+              Participação em discussões, construção de consensos e acompanhamento de pautas que influenciam diretamente o desenvolvimento do Paraná e do Brasil.
+            </p>
+          </div>
+        </article>
+
+        <article class="parliament-item parliament-reveal-left" style="--delay: 380ms;">
+          <div class="parliament-row">
+            <span>Comissões parlamentares</span>
+
+            <button class="parliament-btn" type="button" aria-expanded="false">
+              Saber mais
+            </button>
+          </div>
+
+          <div class="parliament-description">
+            <p>
+              Atuação em espaços técnicos de debate, análise e decisão, onde temas importantes são discutidos antes de avançarem no Congresso Nacional.
+            </p>
+          </div>
+        </article>
+
+        <article class="parliament-item parliament-reveal-right" style="--delay: 500ms;">
+          <div class="parliament-row">
+            <span>Votações importantes</span>
+
+            <button class="parliament-btn" type="button" aria-expanded="false">
+              Saber mais
+            </button>
+          </div>
+
+          <div class="parliament-description">
+            <p>
+              Presença em votações relevantes para defender interesses do Paraná, apoiar medidas responsáveis e contribuir com decisões de impacto nacional.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="parliament-image parliament-reveal-right" style="--delay: 180ms;">
+      <img src="assets/img/atuacao-parlamentar.webp" alt="Luiz Nishimori em atuação parlamentar">
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .parliament-section {
+    width: 100%;
+    background: #0da13a;
+    padding: 86px 24px 94px;
+    overflow: hidden;
+  }
+
+  .parliament-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    align-items: center;
+    gap: 44px;
+  }
+
+  .parliament-content h2 {
+    font-size: 58px;
+    line-height: 0.86;
+    font-weight: 900;
+    letter-spacing: -3.6px;
+    color: #ffffff;
+    margin-bottom: 28px;
+  }
+
+  .parliament-content h2 span {
+    color: #004b9b;
+  }
+
+  .parliament-subtitle {
+    font-size: 25px;
+    line-height: 0.92;
+    font-weight: 400;
+    color: #ffffff;
+    max-width: 620px;
+    margin-bottom: 34px;
+  }
+
+  .parliament-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 628px;
+  }
+
+  .parliament-item {
+    width: 100%;
+  }
+
+  .parliament-row {
+    width: 100%;
+    min-height: 68px;
+    background: #ffffff;
+    border-radius: 999px;
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+  }
+
+  .parliament-row span {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 400;
+    color: #0da13a;
+    padding-left: 38px;
+    padding-right: 18px;
+  }
+
+  .parliament-btn {
+    position: relative;
+    height: 68px;
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    background: #004b9b;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .parliament-btn::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -85%;
+    width: 55%;
+    height: 180%;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 35%,
+      rgba(255, 255, 255, 0.68) 50%,
+      rgba(255, 255, 255, 0.15) 65%,
+      transparent 100%
+    );
+    transform: skewX(-22deg);
+    z-index: -1;
+  }
+
+  .parliament-btn:hover {
+    background: #003f85;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 75, 155, 0.24);
+  }
+
+  .parliament-btn:hover::before {
+    animation: parliamentLightSweep 0.85s ease;
+  }
+
+  .parliament-btn:active {
+    transform: scale(0.98);
+  }
+
+  .parliament-item.active .parliament-btn::before {
+    animation: parliamentLightSweep 0.85s ease;
+  }
+
+  @keyframes parliamentLightSweep {
+    0% {
+      left: -85%;
+    }
+
+    100% {
+      left: 135%;
+    }
+  }
+
+  .parliament-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.42s ease;
+  }
+
+  .parliament-description p {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.18;
+    border-radius: 26px;
+    padding: 18px 26px;
+    margin: 10px 0 2px;
+  }
+
+  .parliament-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .parliament-image img {
+    width: 430px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 28px;
+    object-fit: cover;
+  }
+
+  .parliament-reveal-left,
+  .parliament-reveal-right {
+    opacity: 0;
+    filter: blur(14px);
+    transition:
+      opacity 0.82s ease,
+      transform 0.82s ease,
+      filter 0.82s ease;
+    transition-delay: var(--delay);
+  }
+
+  .parliament-reveal-left {
+    transform: translateX(-90px);
+  }
+
+  .parliament-reveal-right {
+    transform: translateX(90px);
+  }
+
+  .parliament-reveal-left.is-visible,
+  .parliament-reveal-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+
+  @media (max-width: 1023px) {
+    .parliament-section {
+      padding: 52px 18px 72px;
+    }
+
+    .parliament-container {
+      max-width: 390px;
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+      text-align: center;
+    }
+
+    .parliament-image {
+      order: 1;
+    }
+
+    .parliament-image img {
+      width: 365px;
+      border-radius: 28px;
+    }
+
+    .parliament-content {
+      order: 2;
+      width: 100%;
+    }
+
+    .parliament-content h2 {
+      font-size: 42px;
+      line-height: 0.78;
+      letter-spacing: -2.8px;
+      margin-bottom: 28px;
+    }
+
+    .parliament-subtitle {
+      font-size: 15.5px;
+      line-height: 0.92;
+      max-width: 315px;
+      margin: 0 auto 34px;
+    }
+
+    .parliament-actions {
+      gap: 18px;
+      max-width: 100%;
+    }
+
+    .parliament-row {
+      min-height: 70px;
+      grid-template-columns: 1.18fr 0.82fr;
+      border-radius: 999px;
+    }
+
+    .parliament-row span {
+      font-size: 15px;
+      text-align: left;
+      padding-left: 24px;
+      padding-right: 10px;
+    }
+
+    .parliament-btn {
+      height: 70px;
+      font-size: 16px;
+    }
+
+    .parliament-description p {
+      text-align: left;
+      font-size: 14.5px;
+      line-height: 1.18;
+      border-radius: 22px;
+      padding: 16px 18px;
+      margin-top: 9px;
+    }
+
+    .parliament-reveal-left {
+      transform: translateX(-56px);
+    }
+
+    .parliament-reveal-right {
+      transform: translateX(56px);
+    }
+  }
+
+  @media (max-width: 380px) {
+    .parliament-content h2 {
+      font-size: 39px;
+    }
+
+    .parliament-image img {
+      width: 340px;
+    }
+
+    .parliament-row span {
+      font-size: 14px;
+      padding-left: 20px;
+    }
+
+    .parliament-btn {
+      font-size: 15px;
+    }
+  }
+</style>
+
+<script>
+  const parliamentItems = document.querySelectorAll(".parliament-item");
+  const parliamentButtons = document.querySelectorAll(".parliament-btn");
+  const parliamentRevealItems = document.querySelectorAll(".parliament-reveal-left, .parliament-reveal-right");
+
+  parliamentButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const currentItem = button.closest(".parliament-item");
+      const currentDescription = currentItem.querySelector(".parliament-description");
+      const isActive = currentItem.classList.contains("active");
+
+      parliamentItems.forEach(function (item) {
+        const description = item.querySelector(".parliament-description");
+        const btn = item.querySelector(".parliament-btn");
+
+        item.classList.remove("active");
+        btn.setAttribute("aria-expanded", "false");
+        description.style.maxHeight = null;
+      });
+
+      if (!isActive) {
+        currentItem.classList.add("active");
+        button.setAttribute("aria-expanded", "true");
+        currentDescription.style.maxHeight = currentDescription.scrollHeight + "px";
+      }
+    });
+  });
+
+  const parliamentObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          parliamentObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.18
+    }
+  );
+
+  parliamentRevealItems.forEach(function (item) {
+    parliamentObserver.observe(item);
+  });
+</script>
